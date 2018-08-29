@@ -1,0 +1,22 @@
+print("a=")
+a = input()
+a = int(a)
+
+print("b=")
+b = input()
+b = int(b)
+
+print("c=")
+c = input()
+c = int(c)
+
+print("k=")
+k = input()
+k = int(k)
+
+try:
+    S = ((a ** 2 / b ** 2 + c ** 2 * a ** 2) / (a + b + c * (k - a / b ** 3)) + c + (k / b - k / a) * c)
+    print(abs(S))
+
+except ZeroDivisionError:
+    print("division by zero!")
