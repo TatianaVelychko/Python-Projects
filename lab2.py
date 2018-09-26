@@ -6,7 +6,7 @@ my_number = random.randint(5, 15)
 
 while True:
     print('Enter user number')
-    user_number = int(input())
+    user_number = float(input())
     if user_number >= my_number:
         print('Try again')
     else:
