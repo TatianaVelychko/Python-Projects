@@ -19,6 +19,16 @@ L = ['repeat', 'retest', 'hello', '', '1234567890']
 S = ([elem for elem in L if 5 < len(elem) < 10])
 print('\n'.join(S))
 
+# task 3
+
+import string
+import random
+
+def answer(chars='АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'):
+    return ''.join(random.choice(chars) for _ in range(5))
+
+print(answer())
+
 # task 4
 
 S = 'repeat retest 6.2 hello 5 1234567890 0.1 -4'
