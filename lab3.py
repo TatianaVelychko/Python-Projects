@@ -32,18 +32,23 @@ my_string = 'ФИО;Возраст;Категория;Иванов Иван Ив
 S = my_string.split(';')
 print(S)
 
-c = [i+j+k for i, j, k in zip(S[::3], S[1::3], S[2::3])]
-E = [i for i in c if i.startswith('Петров')]
-print(' '.join(S[0:3]), '\n', '\n'.join(E))
+n = 3
+D = [S[i:i+n] for i in range(0, len(S), n)]
+print(D)
+
+for x in D:
+    for y in x:
+        if y.startswith('Петров'):
+            print(' '.join(x))
+
+for z in D:
+    if '21 год' in z:
+        print(' '.join(z))
 
 #4
 
 L = 'Пусть дана строка произвольной длины. Выведите информацию о том, сколько в ней символов и сколько слов.'
 
-def count_letters(L):
-    return len(L) - L.count(' ')
-
-
-print(count_letters(L))
 print(len(L))
+print(len(L) - L.count(' '))
 print(len(L.split(' ')))
