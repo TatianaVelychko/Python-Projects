@@ -21,13 +21,10 @@ print('\n'.join(S))
 
 # task 3
 
-import string
-import random
+from random import randint
 
-def answer(chars='АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'):
-    return ''.join(random.choice(chars) for _ in range(5))
-
-print(answer())
+for _ in range(5):
+    print(chr(randint(1040, 1071)), end='')
 
 # task 4
 
