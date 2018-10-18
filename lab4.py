@@ -45,18 +45,3 @@ for k in my_len:
 for S in my_len:
     if S[0].startswith('БО'):
         print(S[0], ':', ', '.join(S[1]))
-
-#4
-
-my_len = [['БО-331101', ['Акулова Алена', 'Бабушкина Ксения', 'Зябликова Анастасия']], ['БВ-421102', ['Громова Евгения', 'Кудрявцева Анна']], ['БО-331103', ['Арнаутова Светлана']]]
-
-G = [j for i in my_len for j in i]
-print(G)
-
-S = dict(zip(G[::2], G[1::2]))
-print(S)
-
-for key, value in S.items():
-    for i in value:
-        if i.startswith('А'):
-            print(key, ':', ''.join(i))
